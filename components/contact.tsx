@@ -58,8 +58,8 @@ export const Contact = () => {
   }
 
   return (
-    <section id="contact" className="container py-24 sm:py-32">
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <section id="contact">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <div className="mb-4">
             <h2 className="text-lg text-primary mb-2 tracking-wider">
@@ -239,7 +239,7 @@ export const Contact = () => {
 
           <CardFooter></CardFooter>
         </Card>
-      </section>
+      </div>
     </section>
   );
 };
