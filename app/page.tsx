@@ -41,7 +41,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div className="w-full flex flex-col lg:max-w-screen-xl mx-auto gap-20 md:gap-32 py-20 md:py-32">
+    <div className="w-full flex flex-col lg:max-w-screen-xl mx-auto gap-20 md:gap-32 px-2 py-10 sm:py-20 md:py-32">
       <Hero />
       <Sponsors />
       <Benefits />
