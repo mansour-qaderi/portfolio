@@ -1,5 +1,5 @@
 "use client";
-import { ReactNode, useState } from "react";
+import { ReactNode, useCallback, useState } from "react";
 import {
   ChevronsDown,
   Github,
@@ -48,16 +48,24 @@ const routeList: RouteProps[] = [
     label: "About",
   },
   {
-    href: "#projects",
-    label: "Projects",
+    href: "#skills",
+    label: "Skills",
+  },
+  {
+    href: "#experiences",
+    label: "Experiences",
+  },
+  {
+    href: "#features",
+    label: "Features",
+  },
+  {
+    href: "#services",
+    label: "Services",
   },
   {
     href: "#contact",
     label: "Contact",
-  },
-  {
-    href: "#faq",
-    label: "FAQ",
   },
 ];
 
@@ -90,6 +98,11 @@ const featureList: FeatureProps[] = [
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const _navbarChangeVisibility = useCallback(() => {
+    setIsOpen((prev) => !prev);
+  }, []);
+
   return (
     <header className="shadow-inner bg-opacity-15 w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border border-secondary z-40 rounded-2xl flex justify-between items-center p-2 bg-card">
       <Link href="/" className="font-bold text-lg flex items-center">
@@ -101,7 +114,7 @@ export const Navbar = () => {
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
             <Menu
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={_navbarChangeVisibility}
               className="cursor-pointer lg:hidden"
             />
           </SheetTrigger>

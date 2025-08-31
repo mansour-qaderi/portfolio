@@ -1,4 +1,5 @@
 "use client";
+import { useCallback } from "react";
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
 import { useForm } from "react-hook-form";
@@ -46,17 +47,15 @@ export const Contacts = () => {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  const onSubmit = useCallback((values: z.infer<typeof formSchema>) => {
     const { firstName, lastName, email, subject, message } = values;
-    console.log(values);
-
     const mailToLink = `mailto:mansourqaderi21@gmail.com?subject=${subject}&body=Hello I am ${firstName} ${lastName}, my Email is ${email}. %0D%0A${message}`;
 
     window.location.href = mailToLink;
-  }
+  }, []);
 
   return (
-    <section id="contact">
+    <section className="pt-20 md:pt-32" id="contact">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <div className="mb-4">

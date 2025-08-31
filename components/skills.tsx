@@ -34,7 +34,7 @@ const skillList: SkillsProps[] = [
 
 export const Skills = () => {
   return (
-    <section id="Skills">
+    <section className="pt-20 md:pt-32" id="skills">
       <h2 className="text-lg md:text-xl text-primary text-center mb-4">
         Top Skills
       </h2>
