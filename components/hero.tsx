@@ -18,42 +18,33 @@ export const Hero = () => {
       <div className="text-center space-y-8">
         <Badge variant="outline" className="text-sm py-2">
           <span className="mr-2 text-primary">
-            <Badge>New</Badge>
+            <Badge>Senior Software Developer</Badge>
           </span>
-          <span> Design is out now! </span>
         </Badge>
 
         <div className="mx-auto text-center text-4xl md:text-6xl font-bold">
-          <h1>
-            Experience the
-            <span className="text-transparent px-2 bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
-              Shadcn
-            </span>
-            landing page
-          </h1>
+          <h1>Mansour Qaderi</h1>
         </div>
 
         <p className="mx-auto text-xl text-muted-foreground">
-          {`We're more than just a tool, we're a community of passionate
-            creators. Get access to exclusive resources, tutorials, and support.`}
+          I’m a Senior Software Developer with a Bachelor’s degree in Computer
+          Science from Herat University and over 5 years of professional
+          experience. I specialize in building scalable, high-performance web
+          and mobile applications using modern technologies like JavaScript,
+          React, and Next.js. Passionate about clean code and problem-solving, I
+          help businesses turn ideas into reliable, user-friendly digital
+          products.
         </p>
 
         <div className="space-y-4 md:space-y-0 md:space-x-4">
-          <Button className="w-5/6 md:w-1/4 font-bold group/arrow">
-            Get Started
-            <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
+          <Button className="font-bold group/arrow">
+            <Link href="#">Hire Me</Link>
+            <ArrowRight className="ml-2 group-hover/arrow:translate-x-1 transition-transform" />
           </Button>
 
-          <Button
-            asChild
-            variant="secondary"
-            className="w-5/6 md:w-1/4 font-bold"
-          >
-            <Link
-              href="https://github.com/nobruf/shadcn-landing-page.git"
-              target="_blank"
-            >
-              Github respository
+          <Button asChild variant="secondary" className="font-bold">
+            <Link href="#" target="_blank">
+              Download CV
             </Link>
           </Button>
         </div>

@@ -1,42 +1,27 @@
-import { Badge } from "@/components/ui/badge";
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+// components/Services.tsx
+import { LaptopIcon, Server, ChartLine, Plug } from "lucide-react";
+import { Card, CardContent } from "./ui/card";
 
-enum ProService {
-  YES = 1,
-  NO = 0,
-}
-interface ServiceProps {
-  title: string;
-  pro: ProService;
-  description: string;
-}
-const serviceList: ServiceProps[] = [
+const services = [
   {
-    title: "Custom Domain Integration",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit adipisicing.",
-    pro: 0,
+    title: "Web Application Development",
+    description: "React, Next.js, Tailwind, TypeScript",
+    icon: <LaptopIcon size={30} className="text-[#ffe960]" />,
   },
   {
-    title: "Social Media Integrations",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, dicta.",
-    pro: 0,
+    title: "Backend Development",
+    description: "NestJS, Node.js, Express, MongoDB, REST API, GraphQL",
+    icon: <Server size={30} className="text-[#ffe960]" />,
   },
   {
-    title: "Email Marketing Integrations",
-    description: "Lorem dolor sit amet adipisicing.",
-    pro: 0,
+    title: "Accounting & Sales Dashboard Systems",
+    description: "Custom ERP, Reporting, Analytics",
+    icon: <ChartLine size={30} className="text-[#ffe960]" />,
   },
   {
-    title: "SEO Optimization",
-    description: "Lorem ipsum dolor sit amet consectetur.",
-    pro: 1,
+    title: "API Integration & Development",
+    description: "Third-party APIs, Payment Systems, Sync Solutions",
+    icon: <Plug size={30} className="text-[#ffe960]" />,
   },
 ];
 
@@ -47,34 +32,28 @@ export const Services = () => {
         Services
       </h2>
 
-      <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">
-        Grow Your Business
-      </h2>
-      <h3 className="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
-        From marketing and sales to operations and strategy, we have the
-        expertise to help you achieve your goals.
-      </h3>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
-
-      <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-4 w-full lg:w-[60%] mx-auto">
-        {serviceList.map(({ title, description, pro }) => (
-          <Card
-            key={title}
-            className="bg-muted/60 dark:bg-card h-full relative"
-          >
-            <CardHeader>
-              <CardTitle>{title}</CardTitle>
-              <CardDescription>{description}</CardDescription>
-            </CardHeader>
-            <Badge
-              data-pro={ProService.YES === pro}
-              variant="secondary"
-              className="absolute -top-2 -right-3 data-[pro=false]:hidden"
+      <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-4 w-full  mx-auto">
+        {services.map((service, idx) => {
+          const icon = service.icon;
+          return (
+            <Card
+              key={idx}
+              className="rounded-2xl shadow hover:shadow-xl transition transform hover:-translate-y-1"
             >
-              PRO
-            </Badge>
-          </Card>
-        ))}
+              <CardContent className="flex flex-col sm:flex-row items-center sm:items-start pt-6 gap-2 md:gap-4">
+                {icon}
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 mt-1">
+                    {service.description}
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          );
+        })}
       </div>
     </section>
   );
