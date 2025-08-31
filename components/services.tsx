@@ -27,7 +27,7 @@ const services = [
 
 export const Services = () => {
   return (
-    <section id="services">
+    <section className="pt-20 md:pt-32" id="services">
       <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
         Services
       </h2>
