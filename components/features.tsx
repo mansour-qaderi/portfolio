@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { Award, CheckCircle, Clock, Code2, Globe, Users } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { AnimatedSection } from "@/shared/animated-section";
 
 interface FeaturesProps {
   icon: ReactNode;
@@ -49,7 +50,7 @@ const featureList: FeaturesProps[] = [
 
 export const Features = () => {
   return (
-    <section className="pt-20 md:pt-32" id="features">
+    <AnimatedSection id="features">
       <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
         Features
       </h2>
@@ -84,6 +85,6 @@ export const Features = () => {
           </div>
         ))}
       </div>
-    </section>
+    </AnimatedSection>
   );
 };

@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { AnimatedSection } from "@/shared/animated-section";
 
 interface ExperienceProps {
   company: string;
@@ -75,7 +76,7 @@ const experiences: ExperienceProps[] = [
 
 export const Experiences = () => {
   return (
-    <section className="pt-20 md:pt-32" id="experiences">
+    <AnimatedSection id="experiences">
       <h2 className="text-lg text-primary text-center tracking-wider mb-4">
         Experiences
       </h2>
@@ -113,6 +114,6 @@ export const Experiences = () => {
           </Card>
         ))}
       </div>
-    </section>
+    </AnimatedSection>
   );
 };
