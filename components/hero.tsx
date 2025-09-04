@@ -38,12 +38,12 @@ export const Hero = () => {
 
         <div className="space-y-4 md:space-y-0 md:space-x-4">
           <Button className="font-bold group/arrow">
-            <Link href="#">Hire Me</Link>
+            <Link href="#contacts">Hire Me</Link>
             <ArrowRight className="ml-2 group-hover/arrow:translate-x-1 transition-transform" />
           </Button>
 
           <Button asChild variant="secondary" className="font-bold">
-            <Link href="#" target="_blank">
+            <Link href="/resume.pdf" target="_blank">
               Download CV
             </Link>
           </Button>
