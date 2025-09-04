@@ -14,7 +14,11 @@ export const ToggleTheme = () => {
       className="w-full justify-start"
     >
       {isLight ? <Moon className="size-5" /> : <Sun className="size-5" />}
-      <span className="block lg:hidden"> Escuro </span>
+      {theme && (
+        <span className="block lg:hidden">
+          {theme?.charAt(0)?.toUpperCase() + theme?.slice(1)}
+        </span>
+      )}
     </Button>
   );
 };

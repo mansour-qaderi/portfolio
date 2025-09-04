@@ -4,8 +4,8 @@ import { Separator } from "@/components/ui/separator";
 
 export const Footer = () => {
   return (
-    <footer className="pt-20 md:pt-32" id="footer">
-      <div className="p-10 bg-card border border-secondary rounded-2xl">
+    <footer className="pt-20 md:pt-32 px-2" id="footer">
+      <div className="p-8 bg-card border border-secondary rounded-2xl">
         <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
           <div className="col-span-full xl:col-span-2">
             <Link href="#" className="flex font-bold items-center">
