@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 interface ErrorProps {
   error: Error;
@@ -10,13 +11,12 @@ interface ErrorProps {
 
 export default function GlobalError({ error, reset }: ErrorProps) {
   useEffect(() => {
-    // برای دیباگ محلی، پیغام خطا را در کنسول نمایش می‌دهیم
     console.error("Unhandled error:", error);
   }, [error]);
 
   return (
-    <main className="min-h-screen flex items-center justify-center bg-gray-50 px-6">
-      <div className="max-w-2xl text-center bg-white rounded-2xl p-8 shadow-lg">
+    <main className="min-h-screen flex items-center justify-center px-6">
+      <div className="max-w-2xl text-center rounded-2xl p-8 shadow-lg">
         <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-[#ffe960] text-gray-900 mx-auto shadow-md">
           <span className="text-2xl font-bold">500</span>
         </div>
@@ -31,17 +31,17 @@ export default function GlobalError({ error, reset }: ErrorProps) {
         </p>
 
         <div className="mt-6 flex flex-col sm:flex-row justify-center gap-4">
-          <button
+          <Button
             onClick={() => reset()}
             className="px-5 py-3 rounded-xl bg-[#ffe960] text-black font-semibold shadow hover:opacity-90 transition"
           >
             Try again
-          </button>
+          </Button>
 
           <Link href="/" className="inline-block">
-            <button className="px-5 py-3 rounded-xl border border-gray-200 text-gray-800 hover:shadow-sm transition">
+            <Button className="px-5 py-3 rounded-xl border border-gray-200 text-gray-800 hover:shadow-sm transition">
               Back to Home
-            </button>
+            </Button>
           </Link>
         </div>
 

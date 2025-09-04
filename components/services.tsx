@@ -1,6 +1,6 @@
-// components/Services.tsx
 import { LaptopIcon, Server, ChartLine, Plug } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
+import { AnimatedSection } from "@/shared/animated-section";
 
 const services = [
   {
@@ -27,7 +27,7 @@ const services = [
 
 export const Services = () => {
   return (
-    <section className="pt-20 md:pt-32" id="services">
+    <AnimatedSection id="services">
       <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
         Services
       </h2>
@@ -55,6 +55,6 @@ export const Services = () => {
           );
         })}
       </div>
-    </section>
+    </AnimatedSection>
   );
 };

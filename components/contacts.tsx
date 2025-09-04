@@ -5,6 +5,7 @@ import { Mail, Phone } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+
 import {
   Form,
   FormControl,
@@ -30,6 +31,7 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { LinkedInIcon, WhatsappIcon, XIcon } from "@/icons";
+import { AnimatedSection } from "@/shared/animated-section";
 
 const formSchema = z.object({
   firstName: z.string().min(2).max(255),
@@ -55,7 +57,7 @@ export const Contacts = () => {
   }, []);
 
   return (
-    <section className="pt-20 md:pt-32" id="contact">
+    <AnimatedSection id="contacts">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <div className="mb-4">
@@ -63,7 +65,7 @@ export const Contacts = () => {
               Contact
             </h2>
 
-            <h2 className="text-3xl md:text-4xl font-bold">Connect With Us</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">Connect With Me</h2>
           </div>
           <div className="flex flex-col gap-4">
             <div>
@@ -242,6 +244,6 @@ export const Contacts = () => {
           <CardFooter></CardFooter>
         </Card>
       </div>
-    </section>
+    </AnimatedSection>
   );
 };
