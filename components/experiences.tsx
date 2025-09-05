@@ -85,7 +85,7 @@ export const Experiences = () => {
         {experiences.map((exp, idx) => (
           <Card
             key={idx}
-            className="shadow-lg rounded-2xl border border-gray-100 hover:shadow-xl transition"
+            className="shadow-lg rounded-2xl border hover:shadow-xl dark:hover:shadow-[hsl(20deg,4.35%,12.28%)] transition"
           >
             <CardHeader className="flex flex-col md:flex-row md:justify-between md:items-center">
               <div>
