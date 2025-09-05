@@ -13,6 +13,7 @@ import {
   Type,
   Github,
 } from "lucide-react";
+import { useTheme } from "next-themes";
 
 interface SkillsProps {
   icon: ReactNode;
@@ -33,6 +34,7 @@ const skillList: SkillsProps[] = [
 ];
 
 export const Skills = () => {
+  const { theme } = useTheme();
   return (
     <section className="pt-20 md:pt-32" id="skills">
       <h2 className="text-lg md:text-xl text-primary text-center mb-4">
@@ -40,7 +42,14 @@ export const Skills = () => {
       </h2>
 
       <div className="mx-auto">
-        <Marquee className="gap-[3rem]" gradient pauseOnHover>
+        <Marquee
+          className="gap-[3rem]"
+          gradientColor={
+            theme === "light" ? "rgb(255, 255, 255)" : "rgb(4, 4, 4)"
+          }
+          gradient
+          pauseOnHover
+        >
           {skillList.map(({ icon, name }) => (
             <div
               key={name}

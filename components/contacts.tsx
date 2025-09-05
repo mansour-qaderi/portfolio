@@ -119,7 +119,7 @@ export const Contacts = () => {
           </div>
         </div>
 
-        <Card className="bg-muted/60 dark:bg-card">
+        <Card className="bg-muted/60 dark:bg-card z-[1]">
           <CardHeader className="text-primary text-2xl"> </CardHeader>
           <CardContent>
             <Form {...form}>

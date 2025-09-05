@@ -14,7 +14,7 @@ export const AnimatedSection = ({ children, id }: Props) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
-      className="pt-20 md:pt-32"
+      className="pt-20 md:pt-32 px-2"
     >
       {children}
     </motion.section>

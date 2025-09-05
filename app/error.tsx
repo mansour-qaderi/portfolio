@@ -21,11 +21,11 @@ export default function GlobalError({ error, reset }: ErrorProps) {
           <span className="text-2xl font-bold">500</span>
         </div>
 
-        <h1 className="mt-6 text-2xl md:text-3xl font-bold text-gray-900">
+        <h1 className="mt-6 text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-50">
           Something went wrong
         </h1>
 
-        <p className="mt-4 text-gray-600">
+        <p className="mt-4 text-gray-600 dark:text-gray-100">
           An unexpected error occurred on the server. Try refreshing the page —
           if the problem persists, please contact me and I’ll look into it.
         </p>
@@ -39,7 +39,7 @@ export default function GlobalError({ error, reset }: ErrorProps) {
           </Button>
 
           <Link href="/" className="inline-block">
-            <Button className="px-5 py-3 rounded-xl border border-gray-200 text-gray-800 hover:shadow-sm transition">
+            <Button className="px-5 py-3 rounded-xl border hover:shadow-sm transition">
               Back to Home
             </Button>
           </Link>
@@ -48,21 +48,21 @@ export default function GlobalError({ error, reset }: ErrorProps) {
         <div className="mt-6 text-sm text-gray-500">
           <p>If you want, report the issue:</p>
           <div className="mt-2 flex justify-center gap-3">
-            <a
+            <Link
               href="mailto:mansourqaderi21@gmail.com?subject=Server%20Error%20500"
-              className="text-sm text-[#111827] underline"
+              target="_blank"
+              rel="noreferrer"
             >
               Email me
-            </a>
+            </Link>
             <span className="text-gray-300">·</span>
-            <a
+            <Link
               href="https://wa.me/93790049201"
               target="_blank"
               rel="noreferrer"
-              className="text-sm text-[#111827] underline"
             >
               WhatsApp
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { AnimatedSection } from "@/shared/animated-section";
+import { Badge } from "./ui/badge";
 
 interface ExperienceProps {
   company: string;
@@ -85,28 +86,27 @@ export const Experiences = () => {
         {experiences.map((exp, idx) => (
           <Card
             key={idx}
-            className="shadow-lg rounded-2xl border border-gray-100 hover:shadow-xl transition"
+            className="shadow-lg rounded-2xl border hover:shadow-xl dark:hover:shadow-[hsl(0,2%,8%)] transition"
           >
             <CardHeader className="flex flex-col md:flex-row md:justify-between md:items-center">
               <div>
                 <h3 className="text-xl font-semibold">{exp.role}</h3>
-                <p className="text-gray-600">{exp.company}</p>
+                <p className="text-gray-900 dark:text-gray-50">{exp.company}</p>
               </div>
               <div className="text-gray-500 mt-2 md:mt-0 text-sm">
                 {exp.duration} | {exp.location}
               </div>
             </CardHeader>
             <CardContent>
-              <p className="text-gray-700 mb-2">{exp.description}</p>
+              <p className="text-gray-600 dark:text-gray-100 mb-2">
+                {exp.description}
+              </p>
               {exp.skills.length > 0 && (
                 <div className="flex flex-wrap gap-2">
                   {exp.skills.map((skill, i) => (
-                    <span
-                      key={i}
-                      className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm"
-                    >
+                    <Badge key={i} variant="secondary">
                       {skill}
-                    </span>
+                    </Badge>
                   ))}
                 </div>
               )}

@@ -1,8 +1,29 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  cursor: url("/mouse-cursor.svg") 4 4, auto;
+}
+
+a,
+button {
+  cursor: url("/mouse-pointer-cursor.svg") 4 4, pointer;
+}
+
+/* Dark mode */
+.dark body {
+  cursor: url("/mouse-cursor-dark.svg") 4 4, auto;
+}
+
+.dark a,
+.dark button {
+  cursor: url("/mouse-pointer-cursor-dark.svg") 4 4, pointer;
 }
 
 /* @custom-variant dark (&:is(.dark *)); */

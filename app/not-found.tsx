@@ -27,14 +27,16 @@ export default function NotFound() {
             </Button>
           </Link>
 
-          <a
+          <Link
+            target="_blank"
+            rel="noreferrer"
             href="mailto:mansourqaderi21@gmail.com?subject=404%20on%20your%20site"
             className="inline-block"
           >
             <Button className="rounded-xl hover:shadow-sm transition">
               Report an issue
             </Button>
-          </a>
+          </Link>
         </div>
 
         <p className="mt-6 text-sm text-gray-500">
