@@ -17,13 +17,19 @@ export const Footer = () => {
           <div className="flex flex-col gap-2">
             <h3 className="font-bold text-lg">Contact</h3>
             <div>
-              <Link href="#" className="opacity-60 hover:opacity-100">
+              <Link
+                href="https://github.com/mansour-qaderi"
+                className="opacity-60 hover:opacity-100"
+              >
                 Github
               </Link>
             </div>
 
             <div>
-              <Link href="#" className="opacity-60 hover:opacity-100">
+              <Link
+                href="https://x.com/mansour_qaderi"
+                className="opacity-60 hover:opacity-100"
+              >
                 Twitter
               </Link>
             </div>
@@ -60,7 +66,7 @@ export const Footer = () => {
             <h3 className="font-bold text-lg">Help</h3>
             <div>
               <Link href="#" className="opacity-60 hover:opacity-100">
-                Contact Us
+                Contact Me
               </Link>
             </div>
 

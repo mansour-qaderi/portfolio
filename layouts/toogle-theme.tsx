@@ -15,7 +15,7 @@ export const ToggleTheme = () => {
     >
       {isLight ? <Moon className="size-5" /> : <Sun className="size-5" />}
       {theme && (
-        <span className="block lg:hidden">
+        <span className="block lg:hidden ml-2 lg:ml-0">
           {theme?.charAt(0)?.toUpperCase() + theme?.slice(1)}
         </span>
       )}
