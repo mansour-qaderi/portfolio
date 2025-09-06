@@ -148,8 +148,8 @@ export const Navbar = () => {
               </div>
             </div>
 
-            <SheetFooter className="flex-col sm:flex-col justify-start items-start">
-              <Separator className="mb-2" />
+            <SheetFooter className="flex-col sm:flex-col justify-start items-start gap-2">
+              <Separator />
               <ToggleTheme />
               <Button
                 size="sm"
