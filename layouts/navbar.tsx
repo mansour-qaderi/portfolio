@@ -148,10 +148,24 @@ export const Navbar = () => {
               </div>
             </div>
 
-            <SheetFooter className="flex-col sm:flex-col justify-start items-start">
+            <SheetFooter className="flex-col sm:flex-col justify-start items-start gap-2">
               <Separator className="mb-2" />
-
               <ToggleTheme />
+              <Button
+                size="sm"
+                variant="secondary"
+                className="w-full justify-start"
+              >
+                <Link
+                  aria-label="View on GitHub"
+                  href="https://github.com/mansour-qaderi/portfolio"
+                  target="_blank"
+                  className="flex items-center gap-2"
+                >
+                  <Github className="size-5" />
+                  Github
+                </Link>
+              </Button>
             </SheetFooter>
           </SheetContent>
         </Sheet>
