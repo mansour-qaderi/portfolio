@@ -148,13 +148,13 @@ export const Navbar = () => {
               </div>
             </div>
 
-            <SheetFooter className="flex-col sm:flex-col justify-start items-start gap-2">
+            <SheetFooter className="flex-col sm:flex-col justify-start items-start">
               <Separator className="mb-2" />
               <ToggleTheme />
               <Button
                 size="sm"
                 variant="secondary"
-                className="w-full justify-start"
+                className="w-full justify-start mt-2"
               >
                 <Link
                   aria-label="View on GitHub"
