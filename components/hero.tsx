@@ -28,12 +28,12 @@ export const Hero = () => {
 
         <p className="mx-auto text-xl text-muted-foreground">
           I’m a Senior Software Developer with a Bachelor’s degree in Computer
-          Science from Herat University and over 5 years of professional
+          Science from Herat University and over 6 years of professional
           experience. I specialize in building scalable, high-performance web
-          and mobile applications using modern technologies like JavaScript,
-          React, and Next.js. Passionate about clean code and problem-solving, I
-          help businesses turn ideas into reliable, user-friendly digital
-          products.
+          and mobile applications using modern technologies such as JavaScript,
+          React, Next.js, and TypeScript. Passionate about clean code and
+          problem-solving, I help businesses turn ideas into reliable,
+          user-friendly digital products.
         </p>
 
         <div className="space-y-4 md:space-y-0 md:space-x-4">
