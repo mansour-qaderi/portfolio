@@ -45,6 +45,12 @@ export const Footer = () => {
             <h3 className="font-bold text-lg">Platforms</h3>
             <div>
               <Link href="#" className="opacity-60 hover:opacity-100">
+                Web
+              </Link>
+            </div>
+
+            <div>
+              <Link href="#" className="opacity-60 hover:opacity-100">
                 iOS
               </Link>
             </div>
@@ -52,12 +58,6 @@ export const Footer = () => {
             <div>
               <Link href="#" className="opacity-60 hover:opacity-100">
                 Android
-              </Link>
-            </div>
-
-            <div>
-              <Link href="#" className="opacity-60 hover:opacity-100">
-                Web
               </Link>
             </div>
           </div>

@@ -23,6 +23,7 @@ interface SkillsProps {
 const skillList: SkillsProps[] = [
   { name: "JavaScript", icon: <Code /> },
   { name: "React.js", icon: <Code /> },
+  { name: "React Native", icon: <Code /> },
   { name: "Next.js", icon: <Monitor /> },
   { name: "TypeScript", icon: <Type /> },
   { name: "React Native", icon: <Smartphone /> },
