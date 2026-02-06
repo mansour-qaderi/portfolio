@@ -9,6 +9,7 @@ html {
 
 body {
   cursor: url("/mouse-cursor.svg") 4 4, auto;
+  overflow: hidden;
 }
 
 a,

@@ -4,8 +4,8 @@ import { AnimatedSection } from "@/shared/animated-section";
 
 const services = [
   {
-    title: "Web Application Development",
-    description: "React, Next.js, Tailwind, TypeScript",
+    title: "Web & Mobile Development",
+    description: "React, React Native, Next.js, Tailwind, TypeScript",
     icon: <LaptopIcon size={30} className="text-[#ffe960]" />,
   },
   {

@@ -31,8 +31,8 @@ export const Hero = () => {
           Science from Herat University and over 6 years of professional
           experience. I specialize in building scalable, high-performance web
           and mobile applications using modern technologies such as JavaScript,
-          React, Next.js, and TypeScript. Passionate about clean code and
-          problem-solving, I help businesses turn ideas into reliable,
+          React, ReactNative, Next.js, and TypeScript. Passionate about clean
+          code and problem-solving, I help businesses turn ideas into reliable,
           user-friendly digital products.
         </p>
 

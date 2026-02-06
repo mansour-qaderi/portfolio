@@ -73,8 +73,11 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-
-          {children}
+          <div className="w-full h-screen overflow-y-auto py-10 sm:py-20 md:py-32 -mt-[58px]">
+            <div className="w-full h-full lg:max-w-screen-xl mx-auto">
+              {children}
+            </div>
+          </div>
         </ThemeProvider>
       </body>
     </html>
