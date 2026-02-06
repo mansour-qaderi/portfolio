@@ -1,3 +1,5 @@
+import { Fragment } from "react";
+
 import { Experiences } from "@/components/experiences";
 import { Contacts } from "@/components/contacts";
 import { Features } from "@/components/features";
@@ -5,13 +7,15 @@ import { Footer } from "@/components/footer";
 import { Hero } from "@/components/hero";
 import { Services } from "@/components/services";
 import { Skills } from "@/components/skills";
+import { Projects } from "@/components/projects";
 
 export default function Home() {
   return (
-    <div className="w-full flex flex-col lg:max-w-screen-xl mx-auto py-10 sm:py-20 md:py-32">
+    <div className="w-full h-full flex flex-col">
       <Hero />
       <Skills />
       <Experiences />
+      <Projects />
       <Features />
       <Services />
       <Contacts />
