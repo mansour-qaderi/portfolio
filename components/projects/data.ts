@@ -1,11 +1,22 @@
 import { StaticImageData } from "next/image";
-import { ag1, ags1, crm1, sel1, selm1, tag1, tagm1, umb1 } from "@/images";
+import {
+  ag1,
+  ags1,
+  crm1,
+  sel1,
+  selm1,
+  swb1,
+  tag1,
+  tagm1,
+  umb1,
+} from "@/images";
 import {
   AG_SCOUT_ROUTE,
   AG_VIEWER_ROUTE,
   CRM_ROUTE,
   SELAM_HALI_MOBILE_ROUTE,
   SELAM_HALI_ROUTE,
+  SWEATBET_ROUTE,
   TAGLET_MOBILE_ROUTE,
   TAGLET_ROUTE,
   UMBRELLA_ROUTE,
@@ -21,6 +32,8 @@ import {
   SELAM_HALI_MOBILE,
   SELAM_HALI_MOBILE_TAG,
   SELAM_HALI_TAG,
+  SWEATBET,
+  SWEATBET_TAG,
   TAGLET,
   TAGLET_MOBILE,
   TAGLET_MOBILE_TAG,
@@ -167,5 +180,14 @@ export const projects: Project[] = [
       "Zustand",
     ],
     href: SELAM_HALI_MOBILE_ROUTE,
+  },
+  {
+    title: SWEATBET,
+    tag: SWEATBET_TAG,
+    description:
+      "SweatBet is a mobile application for sports betting that allows users to bet on sports events and earn money.",
+    image: swb1,
+    tech: ["React Native", "TypeScript", "React Query", "Tailwind CSS"],
+    href: SWEATBET_ROUTE,
   },
 ];

@@ -53,6 +53,13 @@ import selm3 from "./selam-hali/mobile/sel-m-3.png";
 import selm4 from "./selam-hali/mobile/sel-m-4.png";
 import selm5 from "./selam-hali/mobile/sel-m-5.png";
 
+// SweatBet Images
+import swb1 from "./sweatbet/swb-1.png";
+import swb2 from "./sweatbet/swb-2.png";
+import swb3 from "./sweatbet/swb-3.png";
+import swb4 from "./sweatbet/swb-4.png";
+import swb5 from "./sweatbet/swb-5.png";
+
 export {
   umb1,
   umb2,
@@ -93,4 +100,9 @@ export {
   selm3,
   selm4,
   selm5,
+  swb1,
+  swb2,
+  swb3,
+  swb4,
+  swb5,
 };
