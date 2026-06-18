@@ -25,13 +25,13 @@ export const ExperienceTimeline = ({
           <div key={idx} className="relative sm:pl-8 group">
             <div className="absolute left-0 top-2 hidden sm:block -translate-x-1/2 w-2 h-2 rounded-full bg-primary ring-4 ring-background" />
 
-            <div className="border border-gray-200 dark:border-white/10 rounded-lg p-6 transition-colors hover:border-white/20">
+            <div className="border border-gray-200 dark:border-white/10 rounded-lg p-6 transition-colors hover:border-primary/40">
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
                 <div>
                   <p className="font-mono text-sm text-primary mb-1">
                     {exp.duration}
                   </p>
-                  <h3 className="font-mono text-lg font-semibold text-foreground">
+                  <h3 className="font-mono text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
                     {exp.role}
                   </h3>
                   <p className="text-foreground font-medium">{exp.company}</p>

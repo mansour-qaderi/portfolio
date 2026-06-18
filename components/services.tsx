@@ -38,7 +38,7 @@ export const Services = () => {
           return (
             <div
               key={idx}
-              className="group flex gap-5 rounded-lg border border-gray-200 dark:border-white/10 p-6 transition-colors hover:border-white/20"
+              className="group flex gap-5 rounded-lg border border-gray-200 dark:border-white/10 p-6 transition-colors hover:border-primary/40"
             >
               <div className="flex flex-col items-start gap-3">
                 <span className="font-mono text-sm text-primary">{index}</span>

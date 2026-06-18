@@ -13,7 +13,7 @@ export const ProjectCard = ({
   return (
     <Link
       href={href}
-      className="group block overflow-hidden rounded-lg border border-gray-200 dark:border-white/10 bg-transparent transition-all duration-300 hover:border-white/20 hover:scale-[1.01]"
+      className="group block overflow-hidden rounded-lg border border-gray-200 dark:border-white/10 bg-transparent transition-all duration-300 hover:border-primary/40 hover:scale-[1.01]"
     >
       <div className="relative aspect-video w-full overflow-hidden">
         <Image

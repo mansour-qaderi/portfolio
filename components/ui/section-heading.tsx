@@ -22,7 +22,7 @@ export const SectionHeading = ({
       className={cn(
         "mb-12 md:mb-16",
         align === "center" && "text-center",
-        className
+        className,
       )}
     >
       <p className="font-mono text-sm text-primary tracking-wider mb-3">
@@ -37,7 +37,7 @@ export const SectionHeading = ({
         <p
           className={cn(
             "mt-4 text-lg text-muted-foreground leading-relaxed",
-            align === "center" && "mx-auto max-w-2xl"
+            align === "center" && "mx-auto max-w-2xl",
           )}
         >
           {subtitle}
