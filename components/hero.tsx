@@ -29,9 +29,10 @@ export const Hero = () => {
             in Computer Science from Herat University and over 6 years of
             professional experience. I specialize in building scalable,
             high-performance web and mobile applications using modern
-            technologies such as JavaScript, React, ReactNative, Next.js, and
-            TypeScript. Passionate about clean code and problem-solving, I help
-            businesses turn ideas into reliable, user-friendly digital products.
+            technologies such as Next.js, Nest.js, React Native and
+            Typescriptand TypeScript. Passionate about clean code and
+            problem-solving, I help businesses turn ideas into reliable,
+            user-friendly digital products.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
