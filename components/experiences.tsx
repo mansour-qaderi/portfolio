@@ -8,7 +8,7 @@ import {
 const experiences: ExperienceItem[] = [
   {
     company: "Milestone Technologies",
-    role: "Senior Software Developer",
+    role: "Senior Full Stack Developer",
     duration: "Oct 2023 - Present",
     location: "Wilayat Muscat, Masqaţ, Oman (Remote)",
     description:

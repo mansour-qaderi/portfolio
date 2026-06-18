@@ -17,7 +17,7 @@ export const Hero = () => {
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div className="space-y-8">
           <p className="font-mono text-sm text-primary tracking-wider">
-            Senior Software Developer
+            Senior Full Stack Developer
           </p>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
@@ -25,7 +25,7 @@ export const Hero = () => {
           </h1>
 
           <p className="text-lg text-muted-foreground leading-relaxed max-w-prose">
-            I&apos;m a Senior Software Developer with a Bachelor&apos;s degree
+            I&apos;m a Senior Full Stack Developer with a Bachelor&apos;s degree
             in Computer Science from Herat University and over 6 years of
             professional experience. I specialize in building scalable,
             high-performance web and mobile applications using modern
