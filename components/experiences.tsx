@@ -4,12 +4,30 @@ import {
   ExperienceTimeline,
   ExperienceItem,
 } from "@/components/experience-timeline";
+import { SWEATBET } from "@/constants";
 
 const experiences: ExperienceItem[] = [
   {
+    company: SWEATBET,
+    role: "Senior Full Stack Developer",
+    duration: "Jan 2026 - Present",
+    location: "Remote",
+    description:
+      "Building a 2D skill-based wagering game for Sweatbet's esports platform from scratch using Next.js, NestJS, PostgreSQL, and Redis within a Turborepo monorepo.",
+    skills: [
+      "Next.js",
+      "Nest.js",
+      "Typescript",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Redis",
+      "Monorepo",
+    ],
+  },
+  {
     company: "Milestone Technologies",
     role: "Senior Software Developer",
-    duration: "Oct 2023 - Present",
+    duration: "Oct 2023 - Jan 2026",
     location: "Wilayat Muscat, Masqaţ, Oman (Remote)",
     description:
       "Led frontend strategy, mentored developers, and delivered scalable, innovative solutions aligned with company goals.",

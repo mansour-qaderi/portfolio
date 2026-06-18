@@ -8,34 +8,34 @@ interface FeatureItem {
 
 const featureList: FeatureItem[] = [
   {
-    title: "Senior Frontend Expertise",
+    title: "Senior Full Stack Developer",
     description:
-      "Over 5 years building web and mobile apps with React.js, Next.js, and React Native.",
+      "6+ years architecting and shipping frontend-heavy web, mobile, and gaming apps with Next.js, React Native, and NestJS.",
   },
   {
-    title: "Leadership & Mentorship",
+    title: "Technical Leadership",
     description:
-      "Led teams, delegated tasks, and guided developers at Milestone Technologies and TrueTale.",
+      "Led frontend strategy and mentored development teams as a senior contributor and team lead at Milestone Technologies and TrueTale.",
   },
   {
-    title: "Full-Stack Frontend Skills",
+    title: "Modern Frontend Architecture",
     description:
-      "Expert in TypeScript, Tailwind CSS, GraphQL, REST APIs, and Apollo.",
+      "Skilled in TypeScript, Tailwind CSS, Remix, GraphQL, REST APIs, and monorepo architecture with Turborepo.",
   },
   {
-    title: "High-Quality, Maintainable Code",
+    title: "Scalable, Maintainable Code",
     description:
-      "Clean, scalable, and efficient code following best practices.",
+      "Champion clean, well-tested code and consistent coding standards across every codebase I touch.",
   },
   {
-    title: "Remote Collaboration & Productivity",
+    title: "Cross-Functional Collaboration",
     description:
-      "Successfully worked with teams across Oman, USA, and Afghanistan, coordinating across time zones.",
+      "Partnered with product, design, and engineering teams across Oman, the USA, and Afghanistan to ship aligned, user-focused features.",
   },
   {
-    title: "Proven Results & Reliability",
+    title: "End-to-End Ownership",
     description:
-      "Delivered projects on time, optimized performance, and ensured excellent UX for multiple clients.",
+      "From game state management at Sweatbet to scalable frontend systems at Milestone, I own delivery from architecture through to production.",
   },
 ];
 
@@ -45,16 +45,14 @@ export const Features = () => {
       <SectionHeading
         number="04"
         label="Features"
-        title="Why Work With Me"
         subtitle="With several years of hands-on experience, I help businesses transform ideas into digital products that deliver value and impact. My focus is on writing clean code, creating smooth user experiences, and delivering projects on time."
-        align="center"
       />
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {featureList.map(({ title, description }) => (
           <div
             key={title}
-            className="group rounded-lg border border-gray-200 dark:border-white/10 p-6 transition-colors hover:border-white/20"
+            className="group rounded-lg border border-gray-200 dark:border-white/10 p-6 transition-colors hover:border-primary/40"
           >
             <div className="w-8 h-px bg-primary mb-4" />
             <h3 className="font-semibold text-foreground mb-2">{title}</h3>
