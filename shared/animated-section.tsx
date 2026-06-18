@@ -1,20 +1,24 @@
 "use client";
 import * as motion from "motion/react-client";
+import { useReducedMotion } from "motion/react";
 
 type Props = {
   children: React.ReactNode;
   id: string;
+  className?: string;
 };
 
-export const AnimatedSection = ({ children, id }: Props) => {
+export const AnimatedSection = ({ children, id, className }: Props) => {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <motion.section
       id={id}
-      initial={{ opacity: 0, y: 100 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      viewport={{ once: true, amount: 0.2 }}
-      className="pt-20 md:pt-32 px-2"
+      initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
+      whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.15 }}
+      className={`scroll-mt-14 py-24 md:py-32 ${className ?? ""}`}
     >
       {children}
     </motion.section>

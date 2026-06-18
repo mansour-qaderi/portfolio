@@ -7,6 +7,7 @@ import {
   SELAM_HALI_TAG,
   TAGLET_TAG,
   UMBRELLA_TAG,
+  SWEATBET_TAG,
 } from "@/constants";
 
 export type ProjectTag =
@@ -17,4 +18,5 @@ export type ProjectTag =
   | typeof TAGLET_MOBILE_TAG
   | typeof SELAM_HALI_TAG
   | typeof TAGLET_TAG
-  | typeof UMBRELLA_TAG;
+  | typeof UMBRELLA_TAG
+  | typeof SWEATBET_TAG;

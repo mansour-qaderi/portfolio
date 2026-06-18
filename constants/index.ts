@@ -6,6 +6,7 @@ export const AG_VIEWER = "AG Viewer Health";
 export const SELAM_HALI = "Selam Hali";
 export const SELAM_HALI_MOBILE = "Selam Hali Mobile App";
 export const TAGLET_MOBILE = "Taglet Mobile App";
+export const SWEATBET = "SweatBet";
 
 // Tags
 export const PROJECTS_TAG = "projects";
@@ -17,3 +18,4 @@ export const SELAM_HALI_MOBILE_TAG = "selam-hali-mobile";
 export const TAGLET_TAG = "taglet";
 export const TAGLET_MOBILE_TAG = "taglet-mobile";
 export const UMBRELLA_TAG = "umbrella";
+export const SWEATBET_TAG = "sweatbet";

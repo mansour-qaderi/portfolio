@@ -1,16 +1,8 @@
 "use client";
-import { ReactNode, useCallback, useState } from "react";
-import {
-  ChevronsDown,
-  Github,
-  Menu,
-  Rocket,
-  Smartphone,
-  Code2,
-  Handshake,
-} from "lucide-react";
+import { useCallback, useState } from "react";
+import { Github, Menu } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
+import { ScrollLink } from "@/shared/scroll-link";
 import {
   Sheet,
   SheetContent,
@@ -20,14 +12,6 @@ import {
   SheetTrigger,
 } from "../components/ui/sheet";
 import { Separator } from "../components/ui/separator";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "../components/ui/navigation-menu";
 import { Button } from "../components/ui/button";
 import { ToggleTheme } from "./toogle-theme";
 
@@ -36,201 +20,113 @@ interface RouteProps {
   label: string;
 }
 
-interface FeatureProps {
-  title: string;
-  description: string;
-  icon: ReactNode;
-}
-
 const routeList: RouteProps[] = [
-  {
-    href: "/#about",
-    label: "About",
-  },
-  {
-    href: "/#skills",
-    label: "Skills",
-  },
-  {
-    href: "/#experiences",
-    label: "Experiences",
-  },
-  {
-    href: "/#features",
-    label: "Features",
-  },
-  {
-    href: "/#services",
-    label: "Services",
-  },
-  {
-    href: "/#contacts",
-    label: "Contact",
-  },
-];
-
-const featureList: FeatureProps[] = [
-  {
-    title: "Modern Web Development",
-    description:
-      "Responsive, fast, and scalable websites with React, Next.js, and Tailwind CSS.",
-    icon: <Rocket />,
-  },
-  {
-    title: "Cross-Platform Mobile Apps",
-    description:
-      "Build powerful React Native apps that run smoothly on both iOS and Android devices.",
-    icon: <Smartphone />,
-  },
-  {
-    title: "TypeScript Expertise",
-    description:
-      "Clean, maintainable, and error-free code with TypeScript for web and mobile projects.",
-    icon: <Code2 />,
-  },
-  {
-    title: "Freelancer Mindset",
-    description:
-      "Focused on results, clear communication, and meeting deadlines to grow your business.",
-    icon: <Handshake />,
-  },
+  { href: "/#hero", label: "About" },
+  { href: "/#skills", label: "Skills" },
+  { href: "/#experiences", label: "Experience" },
+  { href: "/#projects", label: "Projects" },
+  { href: "/#features", label: "Why Me" },
+  { href: "/#services", label: "Services" },
+  { href: "/#contacts", label: "Contact" },
 ];
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const _navbarChangeVisibility = useCallback(() => {
-    setIsOpen((prev) => !prev);
-  }, []);
+  const closeMenu = useCallback(() => setIsOpen(false), []);
 
   return (
-    <header className="shadow-inner bg-opacity-15 w-[90%] lg:max-w-screen-xl top-5 mx-auto sticky border border-secondary z-40 rounded-2xl flex justify-between items-center p-2 bg-card">
-      <Link href="/" className="font-bold text-lg flex items-center">
-        <ChevronsDown className="bg-gradient-to-tr border-secondary from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white" />
-        Mansour<span className="text-[#ffe960]">Dev</span>
-      </Link>
-      {/* <!-- Mobile --> */}
-      <div className="flex items-center lg:hidden">
-        <Sheet open={isOpen} onOpenChange={setIsOpen}>
-          <SheetTrigger asChild>
-            <Menu
-              onClick={_navbarChangeVisibility}
-              className="cursor-pointer lg:hidden"
-            />
-          </SheetTrigger>
+    <header className="sticky top-0 z-40 w-full border-b border-gray-200 dark:border-white/10 bg-background/80 backdrop-blur-md">
+      <div className="max-w-screen-xl mx-auto flex h-14 items-center justify-between px-4 sm:px-6 lg:px-8">
+        <Link
+          href="/"
+          className="font-mono text-sm font-semibold tracking-tight"
+        >
+          Mansour<span className="text-primary">Dev</span>
+        </Link>
 
-          <SheetContent
-            side="left"
-            className="flex flex-col justify-between rounded-tr-2xl rounded-br-2xl bg-card border-secondary"
-          >
-            <div>
-              <SheetHeader className="mb-4 ml-4">
-                <SheetTitle className="flex items-center">
-                  <Link href="/" className="flex items-center">
-                    <ChevronsDown className="bg-gradient-to-tr border-secondary from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white" />
-                    Mansour<span className="text-[#ffe960]">Dev</span>
-                  </Link>
-                </SheetTitle>
-              </SheetHeader>
-
-              <div className="flex flex-col gap-2">
-                {routeList.map(({ href, label }) => (
-                  <Button
-                    key={href}
-                    onClick={() => setIsOpen(false)}
-                    asChild
-                    variant="ghost"
-                    className="justify-start text-base"
-                  >
-                    <Link href={href}>{label}</Link>
-                  </Button>
-                ))}
-              </div>
-            </div>
-
-            <SheetFooter className="flex-col sm:flex-col justify-start items-start gap-2">
-              <Separator />
-              <ToggleTheme />
-              <Button
-                size="sm"
-                variant="secondary"
-                className="w-full justify-start mt-2"
-              >
-                <Link
-                  aria-label="View on GitHub"
-                  href="https://github.com/mansour-qaderi/portfolio"
-                  target="_blank"
-                  className="flex items-center gap-2"
-                >
-                  <Github className="size-5" />
-                  Github
-                </Link>
+        {/* Mobile */}
+        <div className="flex items-center gap-2 lg:hidden">
+          <ToggleTheme />
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" aria-label="Open menu">
+                <Menu className="size-5" />
               </Button>
-            </SheetFooter>
-          </SheetContent>
-        </Sheet>
-      </div>
+            </SheetTrigger>
 
-      {/* <!-- Desktop --> */}
-      <NavigationMenu className="hidden lg:block mx-auto">
-        <NavigationMenuList>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger className="bg-card text-base">
-              Features
-            </NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <div className="grid w-[600px] grid-cols-2 gap-5 p-4">
-                <Image
-                  src="https://avatars.githubusercontent.com/u/75042455?v=4"
-                  alt="RadixLogo"
-                  className="h-full w-full rounded-md object-cover"
-                  width={600}
-                  height={600}
-                />
-                <ul className="flex flex-col gap-2">
-                  {featureList.map(({ title, description, icon }) => (
-                    <li
-                      key={title}
-                      className="rounded-md p-3 text-sm hover:bg-muted"
+            <SheetContent
+              side="right"
+              className="flex flex-col justify-between bg-background border-white/10"
+            >
+              <div>
+                <SheetHeader className="mb-6">
+                  <SheetTitle className="font-mono text-left">
+                    Mansour<span className="text-primary">Dev</span>
+                  </SheetTitle>
+                </SheetHeader>
+
+                <nav className="flex flex-col gap-1">
+                  {routeList.map(({ href, label }) => (
+                    <Button
+                      key={href}
+                      onClick={closeMenu}
+                      asChild
+                      variant="ghost"
+                      className="justify-start font-mono text-sm"
                     >
-                      {icon}
-                      <p className="mb-1 font-semibold leading-none text-foreground">
-                        {title}
-                      </p>
-                      <p className="line-clamp-2 text-muted-foreground">
-                        {description}
-                      </p>
-                    </li>
+                      <ScrollLink href={href}>{label}</ScrollLink>
+                    </Button>
                   ))}
-                </ul>
+                </nav>
               </div>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
 
-          <NavigationMenuItem>
-            {routeList.map(({ href, label }) => (
-              <NavigationMenuLink key={href} asChild>
-                <Link href={href} className="text-base px-2">
-                  {label}
-                </Link>
-              </NavigationMenuLink>
-            ))}
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
+              <SheetFooter className="flex-col items-start gap-3 sm:flex-col">
+                <Separator className="bg-white/10" />
+                <Button asChild variant="outline" size="sm" className="w-full">
+                  <Link
+                    aria-label="View on GitHub"
+                    href="https://github.com/mansour-qaderi/portfolio"
+                    target="_blank"
+                  >
+                    <Github className="size-4 mr-2" />
+                    GitHub
+                  </Link>
+                </Button>
+              </SheetFooter>
+            </SheetContent>
+          </Sheet>
+        </div>
 
-      <div className="hidden lg:flex">
-        <ToggleTheme />
+        {/* Desktop */}
+        <nav className="hidden lg:flex items-center gap-1">
+          {routeList.map(({ href, label }) => (
+            <ScrollLink
+              key={href}
+              href={href}
+              className="font-mono text-sm text-muted-foreground px-3 py-2 transition-colors hover:text-primary"
+            >
+              {label}
+            </ScrollLink>
+          ))}
+        </nav>
 
-        <Button asChild size="sm" variant="ghost" aria-label="View on GitHub">
-          <Link
+        <div className="hidden lg:flex items-center gap-2">
+          <ToggleTheme />
+          <Button
+            asChild
+            variant="ghost"
+            size="icon"
             aria-label="View on GitHub"
-            href="https://github.com/mansour-qaderi/portfolio"
-            target="_blank"
           >
-            <Github className="size-5" />
-          </Link>
-        </Button>
+            <Link
+              href="https://github.com/mansour-qaderi/portfolio"
+              target="_blank"
+            >
+              <Github className="size-5" />
+            </Link>
+          </Button>
+        </div>
       </div>
     </header>
   );

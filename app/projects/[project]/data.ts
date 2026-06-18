@@ -38,6 +38,11 @@ import {
   selm3,
   selm4,
   selm5,
+  swb3,
+  swb1,
+  swb2,
+  swb4,
+  swb5,
 } from "@/images";
 
 export const umbrellaImages = [umb1, umb2, umb3, umb4];
@@ -48,3 +53,4 @@ export const agViewerImages = [ag1, ag2, ag3, ag4, ag5];
 export const agScoutImages = [ags1, ags2, ags3, ags4, ags5];
 export const selamHaliImages = [sel1, sel2, sel3, sel4, sel5];
 export const selamHaliMobileImages = [selm1, selm2, selm3, selm4, selm5];
+export const sweatbetImages = [swb1, swb2, swb3, swb4, swb5];

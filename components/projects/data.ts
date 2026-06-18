@@ -1,11 +1,22 @@
 import { StaticImageData } from "next/image";
-import { ag1, ags1, crm1, sel1, selm1, tag1, tagm1, umb1 } from "@/images";
+import {
+  ag1,
+  ags1,
+  crm1,
+  sel1,
+  selm1,
+  swb1,
+  tag1,
+  tagm1,
+  umb1,
+} from "@/images";
 import {
   AG_SCOUT_ROUTE,
   AG_VIEWER_ROUTE,
   CRM_ROUTE,
   SELAM_HALI_MOBILE_ROUTE,
   SELAM_HALI_ROUTE,
+  SWEATBET_ROUTE,
   TAGLET_MOBILE_ROUTE,
   TAGLET_ROUTE,
   UMBRELLA_ROUTE,
@@ -21,6 +32,8 @@ import {
   SELAM_HALI_MOBILE,
   SELAM_HALI_MOBILE_TAG,
   SELAM_HALI_TAG,
+  SWEATBET,
+  SWEATBET_TAG,
   TAGLET,
   TAGLET_MOBILE,
   TAGLET_MOBILE_TAG,
@@ -167,5 +180,22 @@ export const projects: Project[] = [
       "Zustand",
     ],
     href: SELAM_HALI_MOBILE_ROUTE,
+  },
+  {
+    title: SWEATBET,
+    tag: SWEATBET_TAG,
+    description:
+      "Sweatbet is a platform focused on reimagining esports through elevated, skill-based wagering, letting users bet on their own performance in competitive gaming. It's positioned as a secure platform for skill-based esports betting rather than traditional chance-based gambling",
+    image: swb1,
+    tech: [
+      "Next.js",
+      "Nest.js",
+      "PostgreSQL",
+      "TypeScript",
+      "Tailwind CSS",
+      "Monorepo",
+      "Redis",
+    ],
+    href: SWEATBET_ROUTE,
   },
 ];

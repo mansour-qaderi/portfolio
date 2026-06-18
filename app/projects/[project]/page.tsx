@@ -9,6 +9,7 @@ import {
   crmImages,
   selamHaliImages,
   selamHaliMobileImages,
+  sweatbetImages,
   tagletImages,
   tagletMobileImages,
   umbrellaImages,
@@ -30,6 +31,8 @@ import {
   TAGLET,
   TAGLET_MOBILE,
   UMBRELLA,
+  SWEATBET_TAG,
+  SWEATBET,
 } from "@/constants";
 import { notFound } from "next/navigation";
 import { ProjectTag } from "@/types";
@@ -45,6 +48,7 @@ const validProject = [
   SELAM_HALI_TAG,
   TAGLET_TAG,
   UMBRELLA_TAG,
+  SWEATBET_TAG,
 ];
 
 const dynamicLoadImages: Record<ProjectTag, StaticImageData[]> = {
@@ -56,6 +60,7 @@ const dynamicLoadImages: Record<ProjectTag, StaticImageData[]> = {
   [AG_SCOUT_TAG]: agScoutImages,
   [SELAM_HALI_TAG]: selamHaliImages,
   [SELAM_HALI_MOBILE_TAG]: selamHaliMobileImages,
+  [SWEATBET_TAG]: sweatbetImages,
 };
 
 const titles: Record<ProjectTag, string> = {
@@ -67,6 +72,7 @@ const titles: Record<ProjectTag, string> = {
   [AG_SCOUT_TAG]: AG_SCOUT,
   [SELAM_HALI_TAG]: SELAM_HALI,
   [SELAM_HALI_MOBILE_TAG]: SELAM_HALI_MOBILE,
+  [SWEATBET_TAG]: SWEATBET,
 };
 
 function assertValidProject(value: string): asserts value is ProjectTag {
@@ -94,7 +100,7 @@ const ProjectPage = ({ params }: { params: Promise<{ project: string }> }) => {
   const images = dynamicLoadImages[project as ProjectTag];
 
   return (
-    <div className="mx-auto max-w-(--breakpoint-2xl) px-4">
+    <div className="mx-auto max-w-(--breakpoint-2xl) px-4 mt-14">
       <div className="w-full h-full flex flex-col gap-4 lg:gap-8">
         <Suspense
           fallback={
