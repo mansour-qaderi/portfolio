@@ -185,9 +185,17 @@ export const projects: Project[] = [
     title: SWEATBET,
     tag: SWEATBET_TAG,
     description:
-      "SweatBet is a mobile application for sports betting that allows users to bet on sports events and earn money.",
+      "Sweatbet is a platform focused on reimagining esports through elevated, skill-based wagering, letting users bet on their own performance in competitive gaming. It's positioned as a secure platform for skill-based esports betting rather than traditional chance-based gambling",
     image: swb1,
-    tech: ["React Native", "TypeScript", "React Query", "Tailwind CSS"],
+    tech: [
+      "Next.js",
+      "Nest.js",
+      "PostgreSQL",
+      "TypeScript",
+      "Tailwind CSS",
+      "Monorepo",
+      "Redis",
+    ],
     href: SWEATBET_ROUTE,
   },
 ];
