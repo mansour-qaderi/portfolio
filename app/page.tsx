@@ -1,5 +1,3 @@
-import { Fragment } from "react";
-
 import { Experiences } from "@/components/experiences";
 import { Contacts } from "@/components/contacts";
 import { Features } from "@/components/features";

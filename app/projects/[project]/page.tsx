@@ -94,7 +94,7 @@ const ProjectPage = ({ params }: { params: Promise<{ project: string }> }) => {
   const images = dynamicLoadImages[project as ProjectTag];
 
   return (
-    <div className="mx-auto max-w-(--breakpoint-2xl) px-4">
+    <div className="mx-auto max-w-(--breakpoint-2xl) px-4 mt-14">
       <div className="w-full h-full flex flex-col gap-4 lg:gap-8">
         <Suspense
           fallback={

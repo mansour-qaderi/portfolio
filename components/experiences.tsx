@@ -1,17 +1,11 @@
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { AnimatedSection } from "@/shared/animated-section";
-import { Badge } from "./ui/badge";
+import { SectionHeading } from "@/components/ui/section-heading";
+import {
+  ExperienceTimeline,
+  ExperienceItem,
+} from "@/components/experience-timeline";
 
-interface ExperienceProps {
-  company: string;
-  role: string;
-  duration: string;
-  location: string;
-  description: string;
-  skills: string[];
-}
-
-const experiences: ExperienceProps[] = [
+const experiences: ExperienceItem[] = [
   {
     company: "Milestone Technologies",
     role: "Senior Software Developer",
@@ -78,42 +72,8 @@ const experiences: ExperienceProps[] = [
 export const Experiences = () => {
   return (
     <AnimatedSection id="experiences">
-      <h2 className="text-lg text-primary text-center tracking-wider mb-4">
-        Experiences
-      </h2>
-
-      <div className="grid lg:grid-cols-2 gap-4 w-full">
-        {experiences.map((exp, idx) => (
-          <Card
-            key={idx}
-            className="shadow-lg rounded-2xl border hover:shadow-xl dark:hover:shadow-[hsl(0,2%,8%)] transition"
-          >
-            <CardHeader className="flex flex-col md:flex-row md:justify-between md:items-center">
-              <div>
-                <h3 className="text-xl font-semibold">{exp.role}</h3>
-                <p className="text-gray-900 dark:text-gray-50">{exp.company}</p>
-              </div>
-              <div className="text-gray-500 mt-2 md:mt-0 text-sm">
-                {exp.duration} | {exp.location}
-              </div>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-600 dark:text-gray-100 mb-2">
-                {exp.description}
-              </p>
-              {exp.skills.length > 0 && (
-                <div className="flex flex-wrap gap-2">
-                  {exp.skills.map((skill, i) => (
-                    <Badge key={i} variant="secondary">
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              )}
-            </CardContent>
-          </Card>
-        ))}
-      </div>
+      <SectionHeading number="02" label="Experience" />
+      <ExperienceTimeline experiences={experiences} />
     </AnimatedSection>
   );
 };

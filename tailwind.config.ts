@@ -16,7 +16,12 @@ const config: Config = {
         "2xl": "1400px",
       },
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        mono: ["var(--font-jetbrains-mono)", "monospace"],
+      },
+    },
   },
   plugins: [],
 };
