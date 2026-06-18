@@ -17,13 +17,13 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mansour Qaderi | Senior Software Developer",
+  title: "Mansour Qaderi | Senior Full Stack Developer",
   description:
-    "Senior Software Developer specializing in Next.js, React, React Native and Typescript. Helping businesses build modern, responsive, and high-performance websites.",
+    "Senior Full Stack Developer specializing in Next.js, Nest.js, React Native and Typescript. Helping businesses build modern, responsive, and high-performance websites.",
   openGraph: {
-    title: "Mansour Qaderi | Senior Software Developer",
+    title: "Mansour Qaderi | Senior Full Stack Developer",
     description:
-      "Senior Software Developer specializing in Next.js, React, React Native and Typescript. Helping businesses build modern, responsive, and high-performance websites.",
+      "Senior Full Stack Developer specializing in Next.js, Nest.js, React Native and Typescript. Helping businesses build modern, responsive, and high-performance websites.",
     url: "https://github.com/mansour-qaderi/portfolio",
     siteName: "Mansour Qaderi Portfolio",
     locale: "en_US",
@@ -43,7 +43,7 @@ export default function RootLayout({
           "min-h-screen bg-background font-sans",
           inter.variable,
           jetbrainsMono.variable,
-          inter.className
+          inter.className,
         )}
       >
         <ThemeProvider
