@@ -19,11 +19,11 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Mansour Qaderi | Senior Full Stack Developer",
   description:
-    "Senior Full Stack Developer specializing in Next.js, React, React Native and Typescript. Helping businesses build modern, responsive, and high-performance websites.",
+    "Senior Full Stack Developer specializing in Next.js, Nest.js, React Native and Typescript. Helping businesses build modern, responsive, and high-performance websites.",
   openGraph: {
     title: "Mansour Qaderi | Senior Full Stack Developer",
     description:
-      "Senior Full Stack Developer specializing in Next.js, React, React Native and Typescript. Helping businesses build modern, responsive, and high-performance websites.",
+      "Senior Full Stack Developer specializing in Next.js, Nest.js, React Native and Typescript. Helping businesses build modern, responsive, and high-performance websites.",
     url: "https://github.com/mansour-qaderi/portfolio",
     siteName: "Mansour Qaderi Portfolio",
     locale: "en_US",
