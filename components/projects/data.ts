@@ -54,6 +54,23 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: SWEATBET,
+    tag: SWEATBET_TAG,
+    description:
+      "Sweatbet is a platform focused on reimagining esports through elevated, skill-based wagering, letting users bet on their own performance in competitive gaming. It's positioned as a secure platform for skill-based esports betting rather than traditional chance-based gambling",
+    image: swb1,
+    tech: [
+      "Next.js",
+      "Nest.js",
+      "PostgreSQL",
+      "TypeScript",
+      "Tailwind CSS",
+      "Monorepo",
+      "Redis",
+    ],
+    href: SWEATBET_ROUTE,
+  },
+  {
     title: UMBRELLA,
     tag: UMBRELLA_TAG,
     description:
@@ -128,7 +145,6 @@ export const projects: Project[] = [
       "Fast APi",
       "Tailwind CSS",
       "Radix UI",
-      "React Hook Form",
     ],
     href: AG_VIEWER_ROUTE,
   },
@@ -149,23 +165,6 @@ export const projects: Project[] = [
     href: AG_SCOUT_ROUTE,
   },
   {
-    title: SELAM_HALI,
-    tag: SELAM_HALI_TAG,
-    description:
-      "Selam Hali is a leading Turkish carpet and rug retailer known for its high-quality, handcrafted products. The Selam Hali website offers an extensive collection of traditional and contemporary carpets, providing customers with a seamless online shopping experience.",
-    image: sel1,
-    tech: [
-      "Next.js",
-      "TypeScript",
-      "React Query",
-      "Apollo Graphql",
-      "Material UI",
-      "Tailwind CSS",
-      "React Hook Form",
-    ],
-    href: SELAM_HALI_ROUTE,
-  },
-  {
     title: SELAM_HALI_MOBILE,
     tag: SELAM_HALI_MOBILE_TAG,
     description:
@@ -182,20 +181,19 @@ export const projects: Project[] = [
     href: SELAM_HALI_MOBILE_ROUTE,
   },
   {
-    title: SWEATBET,
-    tag: SWEATBET_TAG,
+    title: SELAM_HALI,
+    tag: SELAM_HALI_TAG,
     description:
-      "Sweatbet is a platform focused on reimagining esports through elevated, skill-based wagering, letting users bet on their own performance in competitive gaming. It's positioned as a secure platform for skill-based esports betting rather than traditional chance-based gambling",
-    image: swb1,
+      "Selam Hali is a leading Turkish carpet and rug retailer known for its high-quality, handcrafted products. The Selam Hali website offers an extensive collection of traditional and contemporary carpets, providing customers with a seamless online shopping experience.",
+    image: sel1,
     tech: [
       "Next.js",
-      "Nest.js",
-      "PostgreSQL",
       "TypeScript",
+      "React Query",
+      "Apollo Graphql",
+      "Material UI",
       "Tailwind CSS",
-      "Monorepo",
-      "Redis",
     ],
-    href: SWEATBET_ROUTE,
+    href: SELAM_HALI_ROUTE,
   },
 ];
